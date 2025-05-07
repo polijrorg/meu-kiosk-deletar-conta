@@ -91,6 +91,30 @@
         font-size: 1.1rem;
       }
     }
+
+    .toast {
+      visibility: hidden;
+      min-width: 250px;
+      margin-left: -125px;
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      border-radius: 4px;
+      padding: 1rem;
+      position: fixed;
+      z-index: 1000;
+      left: 50%;
+      bottom: 30px;
+      font-size: 1rem;
+      opacity: 0;
+      transition: opacity 0.3s ease, bottom 0.3s ease;
+    }
+
+    .toast.show {
+      visibility: visible;
+      opacity: 1;
+      bottom: 50px;
+    }
   </style>
 </head>
 <body>
@@ -128,7 +152,35 @@
       <p>Entre em contato com nosso suporte pelo e-mail acima ou visite nossa <a href="https://jorge-back.puerino.com/politicas/" target="_blank">Política de Privacidade</a>.</p>
     </section>
 
-    <a class="button" href="mailto:contato@puerino.com.br?subject=Excluir%20minha%20conta%20-%20Puerino">Solicitar exclusão por e-mail</a>
+    <a id="copyEmailBtn" class="button" href="#">Solicitar exclusão por e-mail</a>
   </div>
+
+  <div id="toast" class="toast">E-mail copiado para a área de transferência!</div>
+
+  <script>
+    function showToast(message) {
+      const toast = document.getElementById('toast');
+      toast.textContent = message;
+      toast.classList.add('show');
+
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 3000);
+    }
+
+    document.getElementById('copyEmailBtn').addEventListener('click', function (e) {
+      e.preventDefault();
+      const email = 'contato@puerino.com.br';
+
+      navigator.clipboard.writeText(email).then(() => {
+        showToast('E-mail copiado para a área de transferência!');
+        window.location.href = `mailto:${email}?subject=Excluir minha conta - Puerino`;
+      }).catch(err => {
+        alert('Não foi possível copiar o e-mail automaticamente. Por favor, copie manualmente.');
+        window.location.href = `mailto:${email}?subject=Excluir minha conta - Puerino`;
+      });
+    });
+  </script>
+
 </body>
 </html>
