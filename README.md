@@ -1,7 +1,7 @@
-# jorge-deletar-conta
+# Jorge - Deletar conta
 Site usado no app puerino, do jorge, para um usuário solicitar a remoção de seus dados.
 
-# Como faço uma página igual para meu app?
+## Como faço uma página igual para meu app?
 
 A Play Store exige uma página como essa para todos os apps que armazenam dados de seus usuários. Se quiser usar esse projeto como template para seu app, você deve:
 
