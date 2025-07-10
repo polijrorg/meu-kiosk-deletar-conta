@@ -1,4 +1,4 @@
-# Jorge - Deletar conta
+# Meu Kiosk - Deletar conta
 Site usado no app meu kiosk, do luiz e ícaro, para um usuário solicitar a remoção de seus dados.
 
 ## Como faço uma página igual para meu app?
