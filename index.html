@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Solicitação de Exclusão de Conta - Puerino</title>
+  <title>Solicitação de Exclusão de Conta - Meu Kiosk</title>
   <link rel="icon" type="image/png" href="favicon.png" />
   <style>
     * {
@@ -122,12 +122,12 @@
     <h1>Solicitação de Exclusão de Conta</h1>
 
     <section>
-      <p>Se você deseja excluir sua conta e os dados associados ao aplicativo <strong>Puerino</strong>, siga as instruções abaixo.</p>
+      <p>Se você deseja excluir sua conta e os dados associados ao aplicativo <strong>Meu Kiosk</strong>, siga as instruções abaixo.</p>
     </section>
 
     <section>
       <h2>Como solicitar a exclusão</h2>
-      <p>Envie um e-mail para <a href="mailto:contato@puerino.com.br">contato@puerino.com.br</a> com o assunto <strong>"Excluir minha conta - Puerino"</strong>.</p>
+      <p>Envie um e-mail para <a href="techmeukiosk@gmail.com">techmeukiosk@gmail.com</a> com o assunto <strong>"Excluir minha conta - Meu Kiosk"</strong>.</p>
       <p>Inclua no e-mail:</p>
       <ul>
         <li>Seu nome completo</li>
@@ -149,7 +149,7 @@
 
     <section>
       <h2>Dúvidas?</h2>
-      <p>Entre em contato com nosso suporte pelo e-mail acima ou visite nossa <a href="https://jorge-back.puerino.com/politicas/" target="_blank">Política de Privacidade</a>.</p>
+      <p>Entre em contato com nosso suporte pelo e-mail acima ou visite nossa <a href="http://back.meukiosk.com.br/politicas/" target="_blank">Política de Privacidade</a>.</p>
     </section>
 
     <a id="copyEmailBtn" class="button" href="#">Solicitar exclusão por e-mail</a>
@@ -170,14 +170,14 @@
 
     document.getElementById('copyEmailBtn').addEventListener('click', function (e) {
       e.preventDefault();
-      const email = 'contato@puerino.com.br';
+      const email = 'techmeukiosk@gmail.com';
 
       navigator.clipboard.writeText(email).then(() => {
         showToast('E-mail copiado para a área de transferência!');
-        window.location.href = `mailto:${email}?subject=Excluir minha conta - Puerino`;
+        window.location.href = `mailto:${email}?subject=Excluir minha conta - Meu Kiosk`;
       }).catch(err => {
         alert('Não foi possível copiar o e-mail automaticamente. Por favor, copie manualmente.');
-        window.location.href = `mailto:${email}?subject=Excluir minha conta - Puerino`;
+        window.location.href = `mailto:${email}?subject=Excluir minha conta - Meu Kiosk`;
       });
     });
   </script>

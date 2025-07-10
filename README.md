@@ -1,5 +1,5 @@
 # Jorge - Deletar conta
-Site usado no app puerino, do jorge, para um usuário solicitar a remoção de seus dados.
+Site usado no app meu kiosk, do luiz e ícaro, para um usuário solicitar a remoção de seus dados.
 
 ## Como faço uma página igual para meu app?
 
